@@ -18,7 +18,7 @@ export function cancelCampaign(callback: any, id: any): any;
 
 export function createAddressBook(callback: any, bookName: any): any;
 
-export function createCampaign(callback: any, senderName: any, senderEmail: any, subject: any, body: any, bookId: any, name: any, attachments: any): any;
+export function createCampaign(callback: any, senderName: any, senderEmail: any, subject: any, body: any, bookId: any, name: any, templateId: any, attachments: any): any;
 
 export function editAddressBook(callback: any, id: any, bookName: any): any;
 
