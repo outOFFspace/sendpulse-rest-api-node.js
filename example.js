@@ -46,7 +46,7 @@ sendpulse.init(API_USER_ID, API_SECRET, TOKEN_STORAGE, function(token) {
     sendpulse.getCampaignInfo(answerGetter,123456);
     sendpulse.campaignStatByCountries(answerGetter,123456);
     sendpulse.campaignStatByReferrals(answerGetter,123456);
-    sendpulse.createCampaign(answerGetter,'Alex','some@domain.com','Example subject','<h1>Example text</h1>',123456);
+    sendpulse.createCampaign(answerGetter,'Alex','some@domain.com','Example subject','<h1>Example text</h1>',123456, 'Example name', 11111);
     sendpulse.cancelCampaign(answerGetter,123456);
     sendpulse.listSenders(answerGetter);
     sendpulse.addSender(answerGetter,'Alex','some@domain.com');
