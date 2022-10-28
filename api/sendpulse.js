@@ -593,8 +593,8 @@ function campaignStatByReferrals(callback, id) {
  * @param name
  * @param attachments
  */
-function createCampaign(callback, senderName, senderEmail, subject, body, bookId, name, attachments) {
-    if ((senderName === undefined) || (!senderName.length) || (senderEmail === undefined) || (!senderEmail.length) || (subject === undefined) || (!subject.length) || (body === undefined) || (!body.length) || (bookId === undefined)) {
+function createCampaign(callback, senderName, senderEmail, subject, body, bookId, name, templateId, attachments) {
+    if ((senderName === undefined) || (!senderName.length) || (senderEmail === undefined) || (templateId === undefined) || (!senderEmail.length) || (subject === undefined) || (!subject.length) || (body === undefined) || (!body.length) || (bookId === undefined)) {
         return callback(returnError('Not all data.'));
     }
     if (name === undefined) {
@@ -609,11 +609,10 @@ function createCampaign(callback, senderName, senderEmail, subject, body, bookId
     var data = {
         sender_name: senderName,
         sender_email: senderEmail,
-        //subject: encodeURIComponent(subject),
-        //subject: urlencode(subject),
         subject: subject,
         body: base64(body),
         list_id: bookId,
+        template_id: templateId,
         name: name,
         attachments: attachments
     };
